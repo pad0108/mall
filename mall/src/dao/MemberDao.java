@@ -56,4 +56,27 @@ public class MemberDao {
 		conn.close();
 		return m;
 	}
+	
+	//회원 정보 출력
+	public Member selectMemberListByEmail(String memberEmail) throws Exception{
+		
+		Member member = null;
+		//db 연결
+		DBUtil dbUtil = new DBUtil();
+		Connection conn = dbUtil.getConnection();
+		//쿼리문 작성
+		String sql = "select member_email, member_name, member_date, member_state from member where member_email = ? ";
+		PreparedStatement stmt = conn.prepareStatement(sql);
+		stmt.setString(1, memberEmail);
+		ResultSet rs = stmt.executeQuery();
+		if(rs.next()) {
+			member = new Member();
+			member.setMemberEmail(rs.getString("member_email"));
+			member.setMemberName(rs.getString("member_name"));
+			member.setMemberDate(rs.getString("member_date"));
+			member.setMemberState(rs.getString("member_state"));
+		}
+		 conn.close();
+		 return member;
+	}
 }

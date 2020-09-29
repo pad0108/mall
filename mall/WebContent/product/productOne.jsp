@@ -24,12 +24,12 @@
 	<h1>상품 상세보기</h1>
 	<table class="table">
 		<tr>
-			<td>제품 번호</td>
-			<td><%=product.getProductId()%></td>
+			<td width="30%">제품 번호</td>
+			<td width="70%"><%=product.getProductId()%></td>
 		</tr>
 		<tr>
 			<td>제품 이미지</td>
-			<td><img src="<%=request.getContextPath()%>/image/<%=product.getProductPic()%>"></td>
+			<td><img src="<%=request.getContextPath()%>/img/<%=product.getProductPic()%>"></td>
 		</tr>
 		<tr>
 			<td>제품 이름</td>
@@ -52,12 +52,13 @@
 	<%
 		}else{
 	%>
-		<td>품절</td>
+		<td>판매중</td>
 	<%
 		}
 	%>
 		</tr>
 	</table>
+	<%if(product.getProductSoldout().equals("N")){ %>
 	<form method="post" action="<%=request.getContextPath()%>/orders/addOrdersAction.jsp" style="text-align:right;">
 		<table class="table-mr-right">	
 		<tr>	
@@ -86,6 +87,11 @@
 			<a href="<%=request.getContextPath()%>/index.jsp"class="btn btn-secondary">뒤로가기</a>	
 		</div>
 	</form>
+	<%}else{ %>
+	<div style="text-align:right;">
+		<a href="<%=request.getContextPath()%>/index.jsp"class="btn btn-secondary">뒤로가기</a>
+	</div>
+	<% }%>
 </div>
 </body>
 </html>

@@ -58,7 +58,7 @@ public class OrdersDao {
 		//데이터베이스 닫기
 		conn.close();
 	}
-	//전체 리스트 출력
+	//로그인한 이메일에 맞는 주문 내역 출력
 		public ArrayList<OrdersAndProduct> selectOrdersLsitByEmail(String memberEmail) throws Exception{
 			 ArrayList<OrdersAndProduct> list = new ArrayList<OrdersAndProduct>();
 		      

@@ -20,13 +20,13 @@
 				if(session.getAttribute("loginMemberEmail") == null){
 			%>
 			<!-- 로그 아웃 상태 -->
-			<a href="<%=request.getContextPath()%>/member/login.jsp"><i class='fas fa-user-alt' style='font-size:48px;'></i></a>
+			<a href="<%=request.getContextPath()%>/member/login.jsp"><i class='fas fa-user-alt' style='font-size:48px;color:black'></i></a>
 			<a href="<%=request.getContextPath()%>/member/login.jsp"><i class='fas fa-shopping-cart' style='font-size:48px;color:black'></i></a>
 			<%
 				}else{
 			%>
 			<!-- 로그인 상태 -->
-			<a href=""><i class='fas fa-user-alt' style='font-size:48px;'></i></a>
+			<a href="<%=request.getContextPath()%>/member/myPage.jsp"><i class='fas fa-user-alt' style='font-size:48px;color:black'></i></a>
 			<a href="<%=request.getContextPath()%>/orders/myOrdersList.jsp"><i class='fas fa-shopping-cart' style='font-size:48px;color:black'></i></a>
 			<%
 				}

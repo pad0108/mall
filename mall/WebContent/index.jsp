@@ -30,18 +30,18 @@
 		<div class = "row">
 			<div class="col-sm-3">
 				<div class="btn-group-vertical btn-block">
-				<a href="#" class = "btn btn-primary" style="margin-top:8px">전체 보기</a>
+				<a href="<%=request.getContextPath()%>/product/productList.jsp" class = "btn btn-primary" style="margin-top:8px">전체 보기</a>
 				<%
 					for(Category c : list){
 				%>
-					<a href="#" class = "btn btn-primary" style="margin-top:8px"><%= c.getCategoryName() %></a>
+					<a href="<%=request.getContextPath()%>/product/productList.jsp?categoryId=<%=c.getCategoryId()%>" class = "btn btn-primary" style="margin-top:8px"><%= c.getCategoryName() %></a>
 				<%
 					}
 				%>
 				</div>
 			</div>
 			<div class="col-sm-9">
-				<img src="<%= request.getContextPath()%>/image/center.jpg">
+				<img src="<%= request.getContextPath()%>/img/center.png" style="width:100%; ">
 			</div>
 		</div>
 	</div>
@@ -52,12 +52,12 @@
 			for(Category c :list2){
 		%>
 			<td ><a href="">
-				<img src="<%=request.getContextPath()%>/image/<%=c.getCategoryPic()%>" class="rounded-circle" width="200" height="200">
+				<img src="<%=request.getContextPath()%>/img/<%=c.getCategoryPic()%>" class="rounded-circle" width="200" height="200">
 				</a>
+				<br>
+				<a href="<%=request.getContextPath()%>/product/productList.jsp?categoryId=<%=c.getCategoryId()%>" class = "btn btn-primary"><%= c.getCategoryName() %></a>
 			</td>
-			<td>
-				<a href="#" class = "btn btn-primary"><%= c.getCategoryName() %></a>
-			</td>			
+		
 		<%
 			}
 		%>
@@ -74,7 +74,7 @@
 		<%
 					for(Category c : list){
 				%>
-					<a href="#" class = "btn btn-primary"><%= c.getCategoryName() %></a>
+					<a href="<%=request.getContextPath()%>/product/productList.jsp?categoryId=<%=c.getCategoryId()%>" class = "btn btn-primary"><%= c.getCategoryName() %></a>
 				<%
 					}
 				%>
@@ -93,7 +93,7 @@
 			%>
 			<td>
 				<div class="card" style="width:400px">
-					<img class="card-img-top" src="<%=request.getContextPath()%>/image/<%=p.getProductPic()%>">
+					<img class="card-img-top" src="/mall-admin/img/<%=p.getProductPic()%>" style="width:398px;height:300px">
 					<div class="card-body">
 					<h4 class="card-title">
 						<a href="<%=request.getContextPath()%>/product/productOne.jsp?productId=<%=p.getProductId()%>">
