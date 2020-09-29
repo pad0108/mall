@@ -21,6 +21,7 @@
 	
 %>
 <body>
+<!-- 두번째 클라이언트에서 커밋 -->
 <div class = "container">
 	<div>
       <jsp:include page="/inc/menu.jsp"></jsp:include>
