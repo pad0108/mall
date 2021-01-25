@@ -52,7 +52,7 @@
 			for(Category c :list2){
 		%>
 			<td ><a href="">
-				<img src="<%=request.getContextPath()%>/img/<%=c.getCategoryPic()%>" class="rounded-circle" width="200" height="200">
+				<img src="/mall-admin/img/<%=c.getCategoryPic()%>" class="rounded-circle" width="200" height="200">
 				</a>
 				<br>
 				<a href="<%=request.getContextPath()%>/product/productList.jsp?categoryId=<%=c.getCategoryId()%>" class = "btn btn-primary"><%= c.getCategoryName() %></a>

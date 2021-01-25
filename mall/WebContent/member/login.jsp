@@ -38,12 +38,12 @@
 		<table class = "table table-borderless"style="text-align:center;">
 			<tr>
 				<td>
-					<input type="text" name="memberEmail" class="form-control" placeholder="이메일" id="memberEmail">
+					<input type="text" name="memberEmail" class="form-control" placeholder="이메일" id="memberEmail" value="myuser@goodee.co.kr">
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<input type="password" name="memberPw" class="form-control" placeholder="비밀번호" id="memberPw">
+					<input type="password" name="memberPw" class="form-control" placeholder="비밀번호" id="memberPw" value="password">
 				</td>
 			</tr>
 		</table>
