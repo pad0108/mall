@@ -4,7 +4,7 @@ public class DBUtil {
 	public Connection getConnection() throws Exception{
 		//db 변수 생성
 		String driver = "org.mariadb.jdbc.Driver";
-		String dbaddr = "jdbc:mariadb://localhost:3306/mall";
+		String dbaddr = "jdbc:mariadb://3.35.214.78:3306/mall";
 		String dbid = "root";
 		String dbpw = "java1004";
 			                  

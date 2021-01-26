@@ -36,7 +36,7 @@ public class CategoryDao {
 	public void updateCategory(Category category) throws Exception{
 		//db 주소,이디, 비밀번호 변수 지정
 		String driver ="org.mariadb.jdbc.Driver";
-		String dbaddr ="jdbc:mariadb://localhost:3306/mall";
+		String dbaddr ="jdbc:mariadb://3.35.214.78:3306/mall";
 		String dbid ="root";
 		String dbpw ="java1004";
 		//sql문
@@ -59,7 +59,7 @@ public class CategoryDao {
 		
 		//db 주소, 아이디 , 비밀번호 변수 지정
 		String driver ="org.mariadb.jdbc.Driver";
-		String dbaddr = "jdbc:mariadb://localhost:3306/mall";
+		String dbaddr = "jdbc:mariadb://3.35.214.78:3306/mall";
 		String dbid = "root";
 		String dbpw = "java1004";
 		//sql 문
